@@ -1,0 +1,11 @@
+*.pyc
+
+.DS_Store
+
+video/*
+train_images/*
+test_images/*
+
+!video/.gitkeep
+!train_images/.gitkeep
+!test_images/.gitkeep
