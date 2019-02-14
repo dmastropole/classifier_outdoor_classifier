@@ -2,7 +2,6 @@ import unittest
 from get_data import get_id, save_image
 import requests
 import re
-import StringIO
 import os
 import imghdr
 
@@ -26,4 +25,5 @@ class TestMarkdownPy(unittest.TestCase):
  
 if __name__ == '__main__':
     unittest.main()
+    os.remove('0sf943sWZls.jpg')
     
