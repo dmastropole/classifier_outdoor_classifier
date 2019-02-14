@@ -20,10 +20,16 @@ To retrieve the images and class labels, run `get_data.py`, which will create th
 [This TensorFlow tutorial](https://www.tensorflow.org/hub/tutorials/image_retraining) covers the process of retraining the Inception V3 model.
 The code for retraining and inference have been downloaded from the website and are called `retrain.py` and `label_image.py` in this repository.
 You can run the python script directly, according to the instructions on the tutorial, or you can run the script `train.sh`.
-You should end up with an accuracy of roughly 95%. 
+You should end up with accuracies above 90%. 
 
 NOTE: The `retrain.py` script splits the images in `train_images` into training/validation sets and computes training/validation accuracies.
 The directory `test_images` exists as an example of how to create a train/test split of the data.
+
+To view how the training/validation accuracies changed during training on TensorBoard, type the following command:
+
+`tensorboard --logdir=./model/retrain_logs`
+
+Then open up a browser and go to `localhost:6006`. You should see these values under the SCALARS tab.
 
 ## Classifying Images
 
