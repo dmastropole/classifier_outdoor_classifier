@@ -1,7 +1,10 @@
 import unittest
-from get_data import get_id
+from get_data import get_id, save_image
 import requests
 import re
+import StringIO
+import os
+import imghdr
 
 class TestMarkdownPy(unittest.TestCase):
  
@@ -11,11 +14,16 @@ class TestMarkdownPy(unittest.TestCase):
     def test_get_id(self):
         '''
         Test example from https://research.google.com/youtube8m/video_id_conversion.html
-        ** Also make sure that if you give wrong id that the script
-        doesn't break. Add error checking to get_id!
         '''
         self.assertEqual(get_id('nXSc'), '0sf943sWZls')
-        #self.assertFalse(...)
+
+            
+    def test_save_image(self):
+        filename_path = save_image('.', '0sf943sWZls')
+        ext = imghdr.what(filename_path)
+        assert ext in ['jpg', 'jpeg', 'tiff', 'png']
+        
  
 if __name__ == '__main__':
     unittest.main()
+    
