@@ -2,7 +2,7 @@
 
 This project retrains the Inception V3 model to classify indoor and outdoor images. 
 
-![test](Untitled Diagram.svg)
+![test](Editable_Diagram.svg)
 
 ## Creating the Dataset 
 
