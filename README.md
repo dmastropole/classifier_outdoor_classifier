@@ -2,6 +2,8 @@
 
 This project retrains the Inception V3 model to classify indoor and outdoor images. 
 
+![test](Untitled Diagram.drawio)
+
 ## Creating the Dataset 
 
 The dataset was created from a subset of the [YouTube-8M Video-level features dataset](https://research.google.com/youtube8m/index.html), 
